@@ -1,0 +1,14 @@
+Line 1: the document type is declared
+Line 2: "xmlns:th="http://www.thymeleaf.org"" shows where the syntax is received from
+
+Line 4: creates the title of the page
+Line 5: meta information, customizes properties of the HTML file
+
+
+
+
+
+Line 11:The th:action="@{/loginIndex}" expression directs the form to POST to the /loginIndex endpoint, while the th:object="${loginIndexObject}" expression declares the model object to use for collecting the form data
+Line 12: The two form fields, expressed with th:field="{username}" and th:field="{password}"correspond to the fields in the loginIndexObject object above
+
+Line 14: this creates the submit button which does a "POST" call to /loginIndex, according to traits set in line 11

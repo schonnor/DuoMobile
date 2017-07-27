@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Login</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+	<iframe id="duo_iframe" width="700" height="700" frameborder="0" title="Duo Login Form"></iframe>
+	<script type="text/javascript" src="jquery-2.1.4.min.js"></script> 
+	<script type="text/javascript" src="Duo-Web-v1.min.js"></script>
+
+	<script th:inline="javascript">
+	/*<![CDATA[*/
+		Duo.init({
+		"host": "api-b551f34b.duosecurity.com",
+		"sig_request": /*[[${loginIndex.sigRequest}]]*/,
+		"post_action": "goodLogin.html"
+		});
+	/*]]>*/
+	</script>
+	</body>
+</html>

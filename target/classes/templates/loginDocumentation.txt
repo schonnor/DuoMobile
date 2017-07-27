@@ -1,0 +1,19 @@
+Line 1: the document type is declared
+Line 2: "xmlns:th="http://www.thymeleaf.org"" shows where the syntax is received from
+
+Line 4: sets the page title
+Line 5: meta information, customizes properties of the HTML file
+
+
+Line 8: Creates an iFrame for the Duo plug-in to be deployed in, along with properites such as size and appearance
+Line 9 and 10: Default path for both Javascript file has them accessed in location SpringAttempt\src\main\webapp\theFiles.jsp
+			 : THese scripts are given by Duo and imported to allow for the deployment of their code in our iFrame
+			 
+Line 12: th:inline="javascript" is required for thymeleaf to write the html inside <script> tags. VERY IMPORTANT 			 
+Line 13: this corresponds to the closing tags in line 19, creates the proper formatting for the thymeleaf attribute in line 16			 
+Line 14: start of Duo.init function that is found in Duo-Web-v1.min.js, receives the info from three fields and creates the Duo login prompt
+Line 15: host information is received from Duo's Web SDK and never changes so can be hardcoded
+Line 16: sigRequest is generated for the loginIndex attribute and imported into the html here using thymeleaf
+Line 17: the post action determines where the webpage should be sent to after it succesfully logs a user in
+Line 18: Closes Duo.init
+Line 19: Corresponds with line 13, closes it

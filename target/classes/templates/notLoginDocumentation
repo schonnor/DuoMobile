@@ -1,0 +1,10 @@
+notLogin.html is used when the user incorrectly enters username and password, it features an error messae and a button
+that sends the user back to the login page to try again
+
+
+
+
+
+Line 8: Header notifying the user of an incorrect login attempt
+Line 9: Creates a form (button) that sends to /loginIndex with a "get" method 
+Line 10: Button reads "Retry", submits the action created by the button
